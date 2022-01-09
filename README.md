@@ -10,22 +10,22 @@ Projeto desenvolvido para colocar em prática o que aprendi no curso de SASS que
 
 ## Home:
 <div align="left">
-    <img src="assets/img/prints/index.png" width="80%">
+    <img src="assets/img/prints/index.png" width="100%">
 </div>
 
 ## Portfólio:
 <div align="left">
-    <img src="assets/img/prints/portfolio.png" width="80%">
+    <img src="assets/img/prints/portfolio.png" width="100%">
 </div>
 
 ## Serviços:
 <div align="left">
-    <img src="assets/img/prints/servicos.png" width="80%">
+    <img src="assets/img/prints/servicos.png" width="100%">
 </div>
 
 ## Contato:
 <div align="left">
-    <img src="assets/img/prints/contato.png" width="80%">
+    <img src="assets/img/prints/contato.png" width="100%">
 </div>
 
 ## Tecnologias:
