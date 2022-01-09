@@ -1,0 +1,544 @@
+@use 'variables';
+@use 'mixins';
+
+//RESET CSSs
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Josefin Sans';
+    outline: none;
+}
+img{
+    width: 100%;
+}
+a{
+    color: variables.$primary-color;
+    text-decoration: none;
+    transition: .6s;
+}
+ul{
+    display: flex;
+}
+html{
+    scroll-behavior: smooth;
+}
+.btn-up{
+    position: fixed;
+    display: none;
+    right: 20px;
+    bottom: 10px;
+    padding: 12px 15px;
+    background-color: variables.$active-color;
+}
+body{
+    background-color: variables.$second-color;
+    color: variables.$text-color;
+
+    //CABECALHO
+    .header{
+        @include mixins.center-content;          
+        padding: 3%;
+        margin-bottom: 20px;
+
+        @include mixins.mobile(){
+            padding: 5%;
+            flex-direction: column;
+        }
+
+        //LOGO
+        &-logo h1{
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            font-weight: 300;
+
+            @include mixins.mobile(){
+                font-size: 2rem;
+            }
+        }
+        
+        //MENU PRINCIPAL
+        &-menu ul{
+            @include mixins.mobile(){
+                margin: 20px 0;
+            }
+            li{
+                margin-right: 25px;
+                @include mixins.mobile(){
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+
+                a{
+                    text-transform: uppercase;
+                    color: variables.$text-color;
+                    font-size: .8rem;
+                    letter-spacing: 1px;
+
+                    &:hover{
+                        color: variables.$active-color;
+                    }
+                }
+            }
+            .active a{
+                color: variables.$active-color;
+            }
+            li:last-child{
+                margin-right: 0;
+            }
+        }
+
+        //REDES SOCIAIS
+        &-redes ul{
+            li{
+                margin-right: 25px;
+                a{
+                    color: variables.$text-color;
+                   
+                    &:hover{
+                        color: variables.$active-color;
+                    }
+                }
+            }
+            li:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+
+    //CONTEUDO PRINCIPAL
+    #principal{   
+        .principal-tittle{
+            border: 2px solid variables.$primary-color;
+            padding: 10px 20px;
+            margin-top: 30px;
+            margin-bottom: 60px;  
+            @include mixins.mobile(){
+                padding: 8px 16px;
+            }
+        } 
+        .principal-tittle h2{
+            font-weight: 300; 
+            letter-spacing: 2px;
+
+            @include mixins.mobile(){
+                font-size: 1.1rem
+            }
+        } 
+
+        //FOTOS
+        .fotos{
+            @include mixins.center-content;
+            flex-wrap: wrap;
+            justify-content: space-between;   
+            
+            @include mixins.mobile(){
+                flex-direction: column;
+            }
+
+            &-card{
+                min-width: 31%;
+                margin-bottom: 3%;
+                height: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                @include mixins.mobile(){
+                    min-width: 80%;
+                    margin-bottom: 8%;
+                }
+
+                .card-tittle{
+                    color: variables.$primary-color;
+                    margin-bottom: 20px;
+                    text-shadow: 2px 2px 2px variables.$text-color;
+                }
+                .card-btn{
+                    padding: 8px 15px;
+                    border: 1px solid variables.$primary-color;
+                    font-size: .9rem;
+                    box-shadow: 2px 2   px 2px variables.$text-color;
+
+                    &:hover{
+                        background-color: variables.$primary-color;
+                        color: variables.$text-color;
+                    }
+                }
+            }
+            #card-1{
+                @include mixins.bg-img('../img/animais.jpg')
+            }
+            #card-2{
+                @include mixins.bg-img('../img/cidade.jpg')
+            }
+            #card-3{
+                @include mixins.bg-img('../img/decoracao.jpg')
+            }
+            #card-4{
+                @include mixins.bg-img('../img/refeicoes.jpg')
+            }
+            #card-5{
+                @include mixins.bg-img('../img/paisagem.jpg')
+            }
+            #card-6{
+                @include mixins.bg-img('../img/arquitetura.jpg')
+            }
+        }
+
+        //PORTIFOLIO
+        .portifolio{
+            @include mixins.center-content;
+            justify-content: center;
+            flex-direction: column;
+
+            &-cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+
+                @include mixins.mobile(){
+                    flex-direction: column  ;
+                }
+
+                .portifolio-card{
+                    width: 31%;
+                    margin-bottom: 8%;
+                    text-align: left;
+
+                    @include mixins.mobile(){
+                        margin-bottom: 12%;
+                    }
+
+                    @include mixins.mobile(){
+                        width: 80%;
+                    }
+                    header{
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center; 
+
+                        @include mixins.mobile(){
+                            justify-content: flex-start;
+                        }
+                    }
+                    img{
+                        width: 350px;
+                        height: 250px;
+                        filter: grayscale(100%);
+                        transition: .6s;
+                        margin-bottom: 15px;
+                        @include mixins.mobile(){
+                            width: 400px;
+                            height: 300px;
+                        }
+                        &:hover{
+                            filter: grayscale(0%);
+                        }
+                        &:hover .ver-fotos{
+                            display: block;
+                        }
+                    }
+                    h3{
+                        margin-bottom: 15px;
+                        font-size: 1.4rem;
+                        color: variables.$primary-color;
+                        @include mixins.mobile(){
+                            font-size: 1.2rem;
+                        }
+                    }
+                    p{
+                        letter-spacing: 300;
+                        margin-bottom: 30px;
+                        font-size: 1.1rem;
+                        line-height: 22px;
+                        @include mixins.mobile(){
+                            font-size: 1rem;
+                            line-height: 20px;
+                        }
+                    }
+                    .portifolio-btn{
+                        border: 1px solid variables.$primary-color;
+                        background-color: transparent;
+                        color: variables.$primary-color;
+                        border-radius: 3px;
+                        padding: 8px 20px;
+                        font-size: .9rem;
+
+                        @include mixins.mobile(){
+                            padding: 6px 12px;
+                            font-size: .8rem;
+                        }
+
+                        &:hover{
+                            background-color: variables.$primary-color;
+                            color: variables.$text-color;
+                        }
+                    }  
+                }
+            }
+        }
+
+        //SERVICOS
+        .servicos{
+            width: 100%;
+            @include mixins.center-content;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &-cards{
+                width: 75%;
+                display: flex;
+                margin-bottom: 6%;
+
+                @include mixins.mobile(){
+                    @include mixins.center-content;
+                    width: 90%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 5%;
+                }
+                .content-servicos{
+                    margin: 0 20px;
+                }
+                h3{
+                    color: #fff;
+                    margin-bottom: 15px;
+                    font-size: 1.5rem;
+                    letter-spacing: 1px;
+                    font-weight: 300;
+                    text-align: left;
+
+                    @include mixins.mobile(){
+                       margin: 15px 0;
+                       font-size: 1.3rem;
+                    }
+                }
+                p{
+                    letter-spacing: 1px;
+                    text-align: justify;
+                    font-weight: 300;
+                    font-size: 1.2rem;
+                    line-height: 25px;
+                    max-width: 800px;
+
+                    @include mixins.mobile(){
+                        margin: 10px 0;
+                        font-size: 1.1rem;
+                        line-height: 20px;
+                    }
+                }
+                img{
+                    width: 400px;
+                    filter: grayscale(100%);
+                    transition: .6s;
+
+                    &:hover{
+                        filter: grayscale(0%);
+                    }
+                }
+            }
+            #card-1{
+                display: flex;
+                align-self: flex-start;
+            }
+            #card-2{
+                align-self: flex-end;
+                flex-direction: row-reverse;
+                @include mixins.mobile(){
+                    flex-direction: column;
+                    align-self: flex-start;
+                }
+                h3{
+                    text-align: right; 
+                    @include mixins.mobile(){
+                        text-align: left; 
+                    }
+                }  
+            }
+            #card-3{
+                align-self: flex-start;
+            }
+            #card-4{
+                align-self: flex-end;
+                flex-direction: row-reverse;
+                @include mixins.mobile(){
+                    flex-direction: column;
+                    align-self: flex-start;
+                }
+                h3{
+                    text-align: right; 
+                    @include mixins.mobile(){
+                        text-align: left; 
+                    }
+                }
+            }
+        }
+
+        //CONTATO
+        .contato{
+            width: 100%;
+            @include mixins.center-content;
+            flex-direction: column;
+            justify-content: space-between;
+           
+            &-content{
+                display: flex;
+                width: 100%;
+                justify-content: flex-start;
+                margin-bottom: 40px;
+               
+                @include mixins.mobile(){
+                    flex-direction: column;
+                    @include mixins.center-content;
+                }
+                h3{
+                    font-size: 1.5rem;
+                    margin-bottom: 20px;
+                    @include mixins.mobile(){
+                        text-align: center;
+                        margin-bottom: 45px;
+                    }
+                }
+
+                //FORMULARIO DE CONTATO
+                .contato-form{
+                    width: 70%;  
+                    padding-top: 10px;
+                    text-align: left;
+
+                    @include mixins.mobile(){
+                        width: 80%;
+                        margin-bottom: 70px;
+                    }
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 700px;
+                        
+                        input, textarea{
+                            padding: 15px;
+                            margin-bottom: 25px;
+                            background: none;
+                            border: 2px solid variables.$primary-color;
+                            color: variables.$primary-color;
+                            font-size: 1rem;
+                        }
+                        textarea{
+                            height: 200px;
+
+                            @include mixins.mobile(){
+                                height: 100px;
+                            }
+                        }
+                        ::placeholder{
+                            font-size: 1rem;
+                        }
+                        .btn-form{
+                            width: 200px;
+                            background: none;
+                            color: variables.$primary-color;
+                            border: 2px solid variables.$primary-color;
+                            padding: 15px;
+                            cursor: pointer;
+                            border-radius: 70px;
+                            font-size: 1rem;
+                            @include mixins.mobile(){
+                                width: 100%;
+                            }
+
+                            &:hover{
+                                background: variables.$active-color;
+                                border-color: variables.$active-color;
+                            }
+                        }
+                    }
+                }
+                
+                //SOBRE
+                .sobre{    
+                    width: 30%;
+                    @include mixins.mobile(){
+                        width: 80%;
+                        margin-bottom: 70px;
+                    }
+                    //SOBRE MIM
+                    .card{
+                        padding: 20px;
+                        background-color: rgba(0,0,0, .5);
+                        border-radius: 3px;
+                    
+                        figure img{
+                            border-radius: 50%;
+                            width: 100px;
+                            height: 100px;
+                            margin-bottom: 20px;
+                        }
+                        h4{
+                            color: variables.$primary-color;
+                            margin-bottom: 8px;
+                            font-size: 1.9rem;
+                            letter-spacing: 1px;
+                            font-weight: 300;
+                        }
+                        h5{
+                            font-size: 1.2rem;
+                            margin-bottom: 20px;
+                            font-weight: 300;
+                        }
+                        p{
+                            padding: 5px;
+                            text-align: center;
+                            font-size: 1.1rem;
+                            color: variables.$primary-color;
+                            font-weight: 300;
+                            letter-spacing: 1px;
+                            margin-bottom: 5px;
+                        }
+                        //REDES SOCIAIS
+                        .redes{
+                            display: flex;
+                            justify-content: center;
+                            margin-top: 30px;
+
+                            li{
+                                margin-right: 30px;
+                                a{
+                                    font-size: 1.1rem;
+                                    color: variables.$text-color;
+                                    &:hover{
+                                        color: variables.$active-color;
+                                    }
+                                }
+                            }
+                            li:last-child{
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //RODAPE
+    .footer{
+        @include mixins.center-content;
+        flex-direction: column;
+        padding: 3%;
+
+        &-copyright{
+            margin-bottom: 8px;
+            span{
+                color: variables.$active-color;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

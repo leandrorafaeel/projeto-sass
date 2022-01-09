@@ -1,0 +1,31 @@
+@use 'variables';
+
+@mixin center-content(){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    max-width:  variables.$content-width;
+    margin: 0 auto;
+}
+
+@mixin bg-img($img){
+    background-image: url('../img/#{$img}');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+    transition: .6s;
+
+    &:hover{
+        filter: grayscale(0%);
+        background-size: 110%;
+    }
+}
+
+@mixin mobile(){
+    @media screen and (max-width: 900px){
+        @content;
+    }
+   
+}

@@ -1,0 +1,635 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Josefin Sans";
+  outline: none;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.6s;
+}
+
+ul {
+  display: flex;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-up {
+  position: fixed;
+  display: none;
+  right: 20px;
+  bottom: 10px;
+  padding: 12px 15px;
+  background-color: #20C997;
+}
+
+body {
+  background-color: #111;
+  color: #777;
+}
+body .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1117px;
+  margin: 0 auto;
+  padding: 3%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 900px) {
+  body .header {
+    padding: 5%;
+    flex-direction: column;
+  }
+}
+body .header-logo h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+@media screen and (max-width: 900px) {
+  body .header-logo h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  body .header-menu ul {
+    margin: 20px 0;
+  }
+}
+body .header-menu ul li {
+  margin-right: 25px;
+}
+@media screen and (max-width: 900px) {
+  body .header-menu ul li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+body .header-menu ul li a {
+  text-transform: uppercase;
+  color: #777;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+body .header-menu ul li a:hover {
+  color: #20C997;
+}
+body .header-menu ul .active a {
+  color: #20C997;
+}
+body .header-menu ul li:last-child {
+  margin-right: 0;
+}
+body .header-redes ul li {
+  margin-right: 25px;
+}
+body .header-redes ul li a {
+  color: #777;
+}
+body .header-redes ul li a:hover {
+  color: #20C997;
+}
+body .header-redes ul li:last-child {
+  margin-right: 0px;
+}
+body #principal .principal-tittle {
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .principal-tittle {
+    padding: 8px 16px;
+  }
+}
+body #principal .principal-tittle h2 {
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .principal-tittle h2 {
+    font-size: 1.1rem;
+  }
+}
+body #principal .fotos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1117px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 900px) {
+  body #principal .fotos {
+    flex-direction: column;
+  }
+}
+body #principal .fotos-card {
+  min-width: 31%;
+  margin-bottom: 3%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 900px) {
+  body #principal .fotos-card {
+    min-width: 80%;
+    margin-bottom: 8%;
+  }
+}
+body #principal .fotos-card .card-tittle {
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px #777;
+}
+body #principal .fotos-card .card-btn {
+  padding: 8px 15px;
+  border: 1px solid #fff;
+  font-size: 0.9rem;
+  box-shadow: 2px 2 px 2px #777;
+}
+body #principal .fotos-card .card-btn:hover {
+  background-color: #fff;
+  color: #777;
+}
+body #principal .fotos #card-1 {
+  background-image: url("../img/../img/animais.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+body #principal .fotos #card-1:hover {
+  filter: grayscale(0%);
+  background-size: 110%;
+}
+body #principal .fotos #card-2 {
+  background-image: url("../img/../img/cidade.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+body #principal .fotos #card-2:hover {
+  filter: grayscale(0%);
+  background-size: 110%;
+}
+body #principal .fotos #card-3 {
+  background-image: url("../img/../img/decoracao.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+body #principal .fotos #card-3:hover {
+  filter: grayscale(0%);
+  background-size: 110%;
+}
+body #principal .fotos #card-4 {
+  background-image: url("../img/../img/refeicoes.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+body #principal .fotos #card-4:hover {
+  filter: grayscale(0%);
+  background-size: 110%;
+}
+body #principal .fotos #card-5 {
+  background-image: url("../img/../img/paisagem.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+body #principal .fotos #card-5:hover {
+  filter: grayscale(0%);
+  background-size: 110%;
+}
+body #principal .fotos #card-6 {
+  background-image: url("../img/../img/arquitetura.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+body #principal .fotos #card-6:hover {
+  filter: grayscale(0%);
+  background-size: 110%;
+}
+body #principal .portifolio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1117px;
+  margin: 0 auto;
+  justify-content: center;
+  flex-direction: column;
+}
+body #principal .portifolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards {
+    flex-direction: column;
+  }
+}
+body #principal .portifolio-cards .portifolio-card {
+  width: 31%;
+  margin-bottom: 8%;
+  text-align: left;
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards .portifolio-card {
+    margin-bottom: 12%;
+  }
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards .portifolio-card {
+    width: 80%;
+  }
+}
+body #principal .portifolio-cards .portifolio-card header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards .portifolio-card header {
+    justify-content: flex-start;
+  }
+}
+body #principal .portifolio-cards .portifolio-card img {
+  width: 350px;
+  height: 250px;
+  filter: grayscale(100%);
+  transition: 0.6s;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards .portifolio-card img {
+    width: 400px;
+    height: 300px;
+  }
+}
+body #principal .portifolio-cards .portifolio-card img:hover {
+  filter: grayscale(0%);
+}
+body #principal .portifolio-cards .portifolio-card img:hover .ver-fotos {
+  display: block;
+}
+body #principal .portifolio-cards .portifolio-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #fff;
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards .portifolio-card h3 {
+    font-size: 1.2rem;
+  }
+}
+body #principal .portifolio-cards .portifolio-card p {
+  letter-spacing: 300;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  line-height: 22px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards .portifolio-card p {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
+body #principal .portifolio-cards .portifolio-card .portifolio-btn {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 3px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+@media screen and (max-width: 900px) {
+  body #principal .portifolio-cards .portifolio-card .portifolio-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+body #principal .portifolio-cards .portifolio-card .portifolio-btn:hover {
+  background-color: #fff;
+  color: #777;
+}
+body #principal .servicos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1117px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body #principal .servicos-cards {
+  width: 75%;
+  display: flex;
+  margin-bottom: 6%;
+}
+@media screen and (max-width: 900px) {
+  body #principal .servicos-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 1117px;
+    margin: 0 auto;
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+  }
+}
+body #principal .servicos-cards .content-servicos {
+  margin: 0 20px;
+}
+body #principal .servicos-cards h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-align: left;
+}
+@media screen and (max-width: 900px) {
+  body #principal .servicos-cards h3 {
+    margin: 15px 0;
+    font-size: 1.3rem;
+  }
+}
+body #principal .servicos-cards p {
+  letter-spacing: 1px;
+  text-align: justify;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 25px;
+  max-width: 800px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .servicos-cards p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 20px;
+  }
+}
+body #principal .servicos-cards img {
+  width: 400px;
+  filter: grayscale(100%);
+  transition: 0.6s;
+}
+body #principal .servicos-cards img:hover {
+  filter: grayscale(0%);
+}
+body #principal .servicos #card-1 {
+  display: flex;
+  align-self: flex-start;
+}
+body #principal .servicos #card-2 {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 900px) {
+  body #principal .servicos #card-2 {
+    flex-direction: column;
+    align-self: flex-start;
+  }
+}
+body #principal .servicos #card-2 h3 {
+  text-align: right;
+}
+@media screen and (max-width: 900px) {
+  body #principal .servicos #card-2 h3 {
+    text-align: left;
+  }
+}
+body #principal .servicos #card-3 {
+  align-self: flex-start;
+}
+body #principal .servicos #card-4 {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 900px) {
+  body #principal .servicos #card-4 {
+    flex-direction: column;
+    align-self: flex-start;
+  }
+}
+body #principal .servicos #card-4 h3 {
+  text-align: right;
+}
+@media screen and (max-width: 900px) {
+  body #principal .servicos #card-4 h3 {
+    text-align: left;
+  }
+}
+body #principal .contato {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1117px;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body #principal .contato-content {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .contato-content {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    max-width: 1117px;
+    margin: 0 auto;
+  }
+}
+body #principal .contato-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .contato-content h3 {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+}
+body #principal .contato-content .contato-form {
+  width: 70%;
+  padding-top: 10px;
+  text-align: left;
+}
+@media screen and (max-width: 900px) {
+  body #principal .contato-content .contato-form {
+    width: 80%;
+    margin-bottom: 70px;
+  }
+}
+body #principal .contato-content .contato-form form {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+}
+body #principal .contato-content .contato-form form input, body #principal .contato-content .contato-form form textarea {
+  padding: 15px;
+  margin-bottom: 25px;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1rem;
+}
+body #principal .contato-content .contato-form form textarea {
+  height: 200px;
+}
+@media screen and (max-width: 900px) {
+  body #principal .contato-content .contato-form form textarea {
+    height: 100px;
+  }
+}
+body #principal .contato-content .contato-form form ::placeholder {
+  font-size: 1rem;
+}
+body #principal .contato-content .contato-form form .btn-form {
+  width: 200px;
+  background: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 70px;
+  font-size: 1rem;
+}
+@media screen and (max-width: 900px) {
+  body #principal .contato-content .contato-form form .btn-form {
+    width: 100%;
+  }
+}
+body #principal .contato-content .contato-form form .btn-form:hover {
+  background: #20C997;
+  border-color: #20C997;
+}
+body #principal .contato-content .sobre {
+  width: 30%;
+}
+@media screen and (max-width: 900px) {
+  body #principal .contato-content .sobre {
+    width: 80%;
+    margin-bottom: 70px;
+  }
+}
+body #principal .contato-content .sobre .card {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+body #principal .contato-content .sobre .card figure img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+body #principal .contato-content .sobre .card h4 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+body #principal .contato-content .sobre .card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+body #principal .contato-content .sobre .card p {
+  padding: 5px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+body #principal .contato-content .sobre .card .redes {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+body #principal .contato-content .sobre .card .redes li {
+  margin-right: 30px;
+}
+body #principal .contato-content .sobre .card .redes li a {
+  font-size: 1.1rem;
+  color: #777;
+}
+body #principal .contato-content .sobre .card .redes li a:hover {
+  color: #20C997;
+}
+body #principal .contato-content .sobre .card .redes li:last-child {
+  margin-right: 0;
+}
+body .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  max-width: 1117px;
+  margin: 0 auto;
+  flex-direction: column;
+  padding: 3%;
+}
+body .footer-copyright {
+  margin-bottom: 8px;
+}
+body .footer-copyright span {
+  color: #20C997;
+}
+body .footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
